@@ -7,7 +7,15 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
-include: package:flutter_lints/flutter.yaml
+include:
+  package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  language:
+    strict-raw-types: false
+  errors:
+    inference_failure_on_instance_creation: false
+    inference_failure_on_function_invocation: false
 
 linter:
   # The lint rules applied to this project can be customized in the
@@ -21,6 +29,14 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    avoid_dynamic_calls: false
+    avoid_equals_and_hash_code_on_mutable_classes: false
+    sort_pub_dependencies: false
+    flutter_style_todos: false
+    lines_longer_than_80_chars: false
+
+
+    public_member_api_docs: false  # Uncomment to disable the `public_member_api_docs` rule
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
 
